@@ -94,3 +94,47 @@ O MER é uma abordagem conceitual e de alto nível para modelagem de dados. É u
 ---
 ---
 
+## Aula 03: Modelos Conceitual, Lógico e Físico
+
+### Níveis da Modelagem de Dados: As Camadas de Abstração
+
+A modelagem de dados é um processo dividido em etapas que nos leva de uma ideia de alto nível sobre as necessidades do negócio até a implementação técnica em um banco de dados. Cada nível de modelagem serve a um propósito específico e se comunica com um público diferente.
+
+- **a) Modelo Conceitual:**
+    - É a visão de mais alto nível do baco de dados. Representa os conceitos de negócio e suas regras, focando em "o quê" o sistema deve armazenar, e não em "como" ele vai armazenar.
+    - **Características Principais:**
+        - **Independente de Tecnologia:** Não se preocupa com qual SGBD será usado, nem com detalhes técnicos como tipos de dados ou índices.
+        - **Foco no Negócio:** Descreve as principais entidades e como elas se relacionam.
+        - **Ferramenta Principal:** Utiliza o **Modelo Entidade-Relacionamento(MER)** e seu diagrama (**DER**) para representar visualmente a estrutura.
+    - Tem como público-alvo analistas de negócio, stakeholders e gerentes. Serve como um ponto de partida para garantir que o modelo de dados está alinhado com as regras e processos da empresa.
+- **b) Modelo Lógico:**
+    - É a evolução do modelo conceitual. Ele traduz as entidades e relacionamentos em uma estrutura mais detalhada, geralmente a do modelo relacional (tabelas), mas ainda sem se prender a um SGBD específico.
+    - **Características Principais:**
+        - **Estrutura Detalhada:** Define as tabelas, as colunas (atributos) para cada tabela, e especifica as **chaves primárias** e **chaves estrangeiras** que implementam os relacionamentos.
+        - **Normalização:** É nessa fase que aplicamos as regras de normalização para evitar redundância e garantir a integridade dos dados.
+        - **Ainda independente de SGBD:** Embora já pareça com um banco de dados relacional, ele não define tipos de dados específicos de um sistema.
+    - Tem como público alvo DBAs, arquitetos de dados e desenvolvedores. É a planta detalhada para a contrução do banco de dados.
+- **c) Modelo Físico:**
+    - É a representação final e implementável do banco de dados. Aqui, todas as decisões técnicas são tomadas com base no SGBD escolhido.
+    - **Características Principais:**
+        - **Dependente de Tecnologia:** É projetado para um SGBD específico.
+        - **Detalhes de Implementação:** Define com precisão os nomes das tabelas e colunas, os tipos de dados exatos, as restrições, os índices para otimização de consultas, e outros elementos físicos como particionamento de tabelas.
+        - Este modelo é usado para gerar o script SQL (DDL - Data Definition Language) que irá criar a estrutura do banco de dados no servidor.
+    - Tem como público-alvo os DBAs e desenvolvedores que irão implementar e manter o banco de dados.
+
+### Arquitetura de Três Níveis e Esquema
+
+- **Arquitetura de Três Níveis (ANSI-SPARC):** É um padrão que formaliza a separação entre a visão do usuário, a estrutura lógica e o armazenamento físico.
+    - **Nível Externo:** Como os usuários e aplicações veem os dados (views, relatórios).
+    - **Nível Conceitual:** A visão unificada de todo o banco de dados (Corresponde ao **Modelo Lógico**).
+    - **Nível Interno:** Como os dados são fisicamente armazenados no disco (Corresponde ao **Modelo Físico**).
+- **Esquema do Banco de Dados (Schema):** É a descrição formal da estrutura do banco de dados, o "esqueleto". O processo de modelagem (conceitual, lógico, físico) é o que utilizamos para projetar e definir o esquema final que será implementado.
+
+### Etapas do Desenvolvimento de um Banco de Dados
+
+O processo de modelagem se encaixa perfeitamente no ciclo de vida de desenvolvimento de um sistema de banco de dados.
+    1. **Análise de Requisitos:** A fase inicial, onde se coleta e se analisa as necessidades de informação dos usuários e do negócio. Entrevistas, análise de documentos e workshops são comuns aqui.
+    2. **Projeto Conceitual:** Usando os requisitos levantados, cria-se o **Modelo Conceitual (DER)**. É a fase de traduzir as regras de negócio em entidades e relacionamentos.
+    3. **Projeto Lógico:** O Modelo Conceitual é mapeado para o **Modelo Lógico**. Entidades se tornam tabelas, atributos se tornam colunas e relacionamentos são implementados com chaves estrangeiras.
+    4. **Projeto Físico:** O Modelo Lógico é traduzido para o **Modelo Físico**, considerando as particularidades do SGBD escolhido para otimizar o desempenho, a segurança e o armazenamento.
+    5. **Implementação e Manutenção:** o script gerado a partir do Modelo Físico é executado para criar o banco de dados. A manutenção contínua garante que o banco de dados continue atendendo às necessidades.
