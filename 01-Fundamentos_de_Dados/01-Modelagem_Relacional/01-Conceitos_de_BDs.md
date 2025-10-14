@@ -133,8 +133,8 @@ A modelagem de dados é um processo dividido em etapas que nos leva de uma ideia
 ### Etapas do Desenvolvimento de um Banco de Dados
 
 O processo de modelagem se encaixa perfeitamente no ciclo de vida de desenvolvimento de um sistema de banco de dados.
-    1. **Análise de Requisitos:** A fase inicial, onde se coleta e se analisa as necessidades de informação dos usuários e do negócio. Entrevistas, análise de documentos e workshops são comuns aqui.
-    2. **Projeto Conceitual:** Usando os requisitos levantados, cria-se o **Modelo Conceitual (DER)**. É a fase de traduzir as regras de negócio em entidades e relacionamentos.
-    3. **Projeto Lógico:** O Modelo Conceitual é mapeado para o **Modelo Lógico**. Entidades se tornam tabelas, atributos se tornam colunas e relacionamentos são implementados com chaves estrangeiras.
-    4. **Projeto Físico:** O Modelo Lógico é traduzido para o **Modelo Físico**, considerando as particularidades do SGBD escolhido para otimizar o desempenho, a segurança e o armazenamento.
-    5. **Implementação e Manutenção:** o script gerado a partir do Modelo Físico é executado para criar o banco de dados. A manutenção contínua garante que o banco de dados continue atendendo às necessidades.
+1. **Análise de Requisitos:** A fase inicial, onde se coleta e se analisa as necessidades de informação dos usuários e do negócio. Entrevistas, análise de documentos e workshops são comuns aqui.
+2. **Projeto Conceitual:** Usando os requisitos levantados, cria-se o **Modelo Conceitual (DER)**. É a fase de traduzir as regras de negócio em entidades e relacionamentos.
+3. **Projeto Lógico:** O Modelo Conceitual é mapeado para o **Modelo Lógico**. Entidades se tornam tabelas, atributos se tornam colunas e relacionamentos são implementados com chaves estrangeiras.
+4. **Projeto Físico:** O Modelo Lógico é traduzido para o **Modelo Físico**, considerando as particularidades do SGBD escolhido para otimizar o desempenho, a segurança e o armazenamento.
+5. **Implementação e Manutenção:** o script gerado a partir do Modelo Físico é executado para criar o banco de dados. A manutenção contínua garante que o banco de dados continue atendendo às necessidades.
