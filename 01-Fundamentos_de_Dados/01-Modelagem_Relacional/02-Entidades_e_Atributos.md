@@ -77,3 +77,52 @@ Pense na analogia de uma planilha:
     - O aluno "João Pereira", com matrícula "2024002".
 
 No modelo relacional, a Entidade se tornará uma tabela e cada instância se tornará uma linha nessa tabela. O objetivo do nosso modelo é definir a estrutura perfeita para armazenar essas instâncias de forma organizada e consistente.
+
+---
+---
+
+## Aula 06: Detalhando as Entidades com Atributos
+
+### O que são Atributos
+
+Se uma **Entidade** é a "gaveta" que armazena informações sobre um assunto, os **Atributos** são as "etiquetas" dentro dessa gaveta. Eles representam as propriedades ou características que descrevem e qualificam uma entidade. Cada instância de uma entidade terá um valor específico para cada um de seus atributos.
+
+- **Definição:** Um atributo é um dado elementar que descreve uma característica de uma entidade.
+- **Exemplo:** Se a entidade `PRODUTO`, seus atributos podem ser `Codigo`, `Nome`, `Descricao` e `Preco`. Para uma instância específica, teríamos:
+    - `Codigo:` 1001
+    - `Nome:` "Caderno Universitário
+    - `Descricao:` "96 folhas, capa dura"
+    - `Preco:` 15.90
+
+### Representando Atributos no DER
+
+No Diagrama Entidade-Relacionamento (DER) clássico, os atributos são representados por **elipses**, conectadas por uma linha à sua respectiva entidade.
+
+### Tipos de Atributos
+
+Os atributos podem ser classificados de acordo com sua estrutura e função, o que nos ajuda a criar um modelo de dados mais preciso.
+
+- a) Atributo Simples
+    - É um atributo indivisível, que não pode ser subdividido em partes menores com significado próprio.
+    - **Exemplos:** `Preco`, `Sexo`, `EstadoCivil`, `QuantidadeEstoque`. Não há como "quebrar" o preço de um produto em partes menores que façam sentido isoladamente no modelo.
+- b) Atributo Composto
+    - É um atributo que pode ser dividido em subpartes menores, que também são atributos com significado próprio.
+    - Tem por finalidade agrupar atributos relacionados para organizar melhor o modelo.
+    - **Exemplo Clássico:** O atributo `Endereço` pode ser composto pelos atributos `Logradouro`, `Numero`, `Bairro`, `Cidade` e `CEP`.
+    - **Representação no DER:** A elipse principal (`Endereco`) é conectada à entidade, e as elipses dos sub-atributos são conectadas à elipse principal.
+- c) Atributo Multivalorado
+    - É um atributo que pode ter **múltiplos valores** para uma mesma instância da entidade.
+    - **Exemplo:** Uma pessoa (entidade `CLIENTE`) pode ter mais de um número de telefone ou mais de um email.
+    - Na passagem para o modelo lógico (tabelas), atributos multivalorados geralmente dão origem a uma nova tabela para garantir a forma normal.
+    - **Representação no DER:** É representado por uma **elipse dupla**.
+- d) Atributo Determinante (Identificador ou Chave)
+    - É um atributo (ou conjunto de atributos) cujo valor **identifica de forma única** cada instância de uma entidade. Ele não pode se repetir dentro da mesma entidade e, geralmente, não pode ser nulo.
+    - É a base para a criação da **Chave Primária** no banco de dados. É o que nos permite encontrar um registro específico sem qualquer ambiguidade.
+    - **Exemplos:**
+        - `CPF` para a entidade `CLIENTE`.
+        - `Matricula` para a entidade `ALUNO`.
+        - `CodigoDeBarras` para a entidade `PRODUTO`.
+    - **Representação no DER:** O nome do atributo na elipse é **sublinhado**.
+
+---
+---
