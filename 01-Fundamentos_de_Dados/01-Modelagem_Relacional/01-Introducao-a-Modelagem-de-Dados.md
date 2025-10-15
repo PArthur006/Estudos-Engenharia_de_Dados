@@ -120,10 +120,33 @@ Uma relação é a estrutura fundamental ao Modelo Relacional e possui regras e 
 ---
 ---
 
-## Aula 09: Chave Primária, Estrangeira e Outras
-
 
 ---
 ---
 
 ## Aula 11: Restrições de Integridade
+
+Restrições de Integridade são um conjunto de regras e validações aplicadas ao banco de dados para garantir a **qualidade, consistência, precisão e validade** dos dados armazenados. Elas evitam que dados incorretos ou inconsistentes sejam inseridos, atualizados ou excluídos.
+
+### Tipos de Restrições
+
+1. **Integridade de Domínio:** Garante que todos os valores em uma determinada coluna sejam válidos, pertencendo ao seu domínio pré-definido.
+    - **Fatores do Domínio:**
+        - Tipo de dado, tamanho, formato, restrições.
+2. **Integridade Referencial:** Garante a validade dos **relacionamentos** entre as tabelas. É a regra que governa as chaves estrangeiras.
+    - **Regra Fundamental:** O valor de uma chave estrangeira em uma tabela deve corresponder a um valor de chave primária existente na tabela referenciada, ou ser nulo (se permitido).
+    - **Ações em Atualização e Exclusão:** Define o que acontece com os registros "filhos" quando o registro "pai" é alterado ou removido.
+        - **RESTRICT / NO ACTION:** Impede a alteração/exclusão do registor pai se existirem registros filhos associados. É a opção mais segura e comum.
+        - **CASCADE:** A alteração/exclusão do registro pai é propagada para todos os registros filhos associados (se o pai for excluído, os filhos também são).
+        - **SET NULL:** Se o registro pai for alterado/excluído, o valor da FK nos registros filhos é definido como `NULL`.
+3. **Integridade de Vazio (`NOT NULL`):** Determina se uma coluna específica pode ou não aceitar valores nulos.
+    - **Valor Nulo (NULL):** Representa um valor ausente, desconhecido ou não aplicável. Não é a mesma coisa que zero(`0`) ou um texto vazio (`' '`).
+    - **Aplicação:** Colunas que são essenciais para identificar ou descrever um registro, como uma chave primária ou um CPF, geralmente são definidas como `NOT NULL`.
+4. **Integridade de Chave:** Garante que cada linha em uma tabela possa ser identificada de forma única.
+    - **Regra Fundamental:** A chave primária de uma tabela deve ser única e não nula. O SGBD impõe essa regra automaticamente.
+5. **Integridade Definida Pelo Usuário:** São regras específicas do negócio que não se encaixam nas categorias anteriores.
+    - Geralmente são implementadas através de `CHECK constraints`, `Triggers` ou `Sotred Procedures`.
+    - Exemplo: O salário de um funcionário não pode ser negativo.
+
+---
+---
