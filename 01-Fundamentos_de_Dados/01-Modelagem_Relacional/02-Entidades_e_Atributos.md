@@ -175,6 +175,20 @@ Os atributos podem ser classificados de acordo com sua estrutura e função, o q
 ---
 ---
 
+## Banco de Dados Relacional
+
+- Baseado na Teoria Relacional de E. F. Codd (1970).
+- Permite que os usuários enxerguem o banco de dados como um conjunto de **tabelas bidimensionais** (relações), compostas por linhas e colunas.
+
+1. **Tabelas, Campos e Registros**
+    - **Tabela (Relação):** Um grupo de dados organizados sobre um mesmo assunto.
+    - **Coluna (Atributo ou Campo):** Simboliza uma característica da tabela (ex: 'Nome', 'Idade').
+    - **Linha (Tupla ou Registro):** Simboliza uma ocorrência única na tabela (ex: "Arthur", "25"). É o conjunto de valores dos campos.
+2. **Domínio:**
+    - Um conjunto de valores **atômicos**(indivisíveis) permitidos para uma coluna.
+    - Define o tipo de informação e o formato.
+    - **Exemplo:** O domínio do atributo "idade" pode ser "Número inteiro entre 18 e 75". O domínio de "Setor" pode ser "Grupo de oito dígitos".
+    - **Restrições de Domínio:** São as regras que validam os valores inseridos na coluna.
 
 ## Aula 09: Chave Primária, Estrangeira e outras
 

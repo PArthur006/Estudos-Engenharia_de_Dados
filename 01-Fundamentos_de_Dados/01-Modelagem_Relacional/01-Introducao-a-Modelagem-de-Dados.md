@@ -6,11 +6,30 @@
 - **Informação:** É o dado processado, organizado e contextualizado, que adquire significado e utilidade. (Ex: "João, 25 anos, mora em São Paulo" - Uma informação sobre uma pessoa).
 - **Metadados:** São "dados sobre os dados". Descrevem as características, o formato, o tipo, a origem e o propósito dos dados. São cruciais para entender e gerenciar a informação. (Ex: Para o dado "25", o metadado pode ser "idade", "tipo numérico", "unidade em anos").
 
+### Conceitos Fundamentais
+
+- **Modelagem de Dados:** Uma metodologia para determinar as Regras de Negócio (RN) e a arquitetura de um Banco de Dados (BD). Ela descreve as estruturas lógicas e físicas do banco.
+- **Minimundo:** A representação da realidade ou o escopo do projeto que será modelado. Mudanças no minimundo são replicadas no banco de dados.
+- **Abstração:** Uma representação mental da realidade que foi mapeada a partir do minimundo. É o processo de omitir detalhes desnecessários para focar nos essenciais.
+
 ### Bancos de Dados e SGBDs
 
 - **Bancos de Dados (BD):** Coleção organizada de dados inter-relacionados que representam um aspecto do mundo real. Permitem o armazenamento e a recuperação eficiente de informações.
 - **Sistema Gerenciador de Banco de Dados (SGBD):** Software que permite a criação, manutenção, controle e acesso aos dados de um BD. Ele atua como uma interface entre os usuários/aplicações e o banco de dados. (Ex: MySQL, PostgreSQL, SQL Server, Oracle).
 - **Sistema de Bancos de Dados:** É o conjunto completo composto pelo Banco de Dados, o SGBD, os usuários e as aplicações que interagem com ele.
+- **Funções Principais:**
+    - Armazenamento e recuperação de dados.
+    - Segurança contra acessos não permitidos.
+    - Proteção contra falhas de sistema ou hardware.
+    - Gerenciamento do acesso concorrente de múltiplos usuários e aplicações.
+- **Quatro Elementos Principais de um SGBD:**
+    1. **Dados:** As informações armazenadas.
+    2. **Software:** A camada de programas (o próprio SGBD) que fica entre os usuários e os dados físicos.
+    3. **Hardware:** Os dispositivos de memória secundária (discos, etc.) onde os dados residem.
+    4. **Usuários:**
+        - **Programador:** Escreve as aplicações que consomem o banco de dados.
+        - **Usuário Final:** Acessa o banco através das aplicações ou linguagens de consulta.
+        - **DBA (Administrador de Banco de Dados):** Gerencia o banco de dados.
 
 ### Aplicações, Usuários e Características
 
@@ -26,6 +45,15 @@
     - **Integridade:** Regras para garantir a correção e consistência dos dados.
     - **Concorrência:** Permite que múltiplos usuários acessem e modifiquem os dados simultaneamente de forma controlada.
     - **Recuperação:** Capacidade de restaurar os dados após falhas.
+
+### Arquiteturas de Banco de Dados
+
+Bancos de dados podem ser categorizados por sua arquitetura:
+
+- **Centralizada:** Todos os dados em um único local.
+- **Descentralizada:** Dados distribuídos em múltiplos locais, mas sem integração.
+- **Distribuída:** Dados distribuídos em múltiplos locais, mas gerenciados como um todo lógico.
+- **Replicada:** Cópias dos dados são mantidas em diferentes locais.
 
 ### Modelos de Bancos de Dados
 
