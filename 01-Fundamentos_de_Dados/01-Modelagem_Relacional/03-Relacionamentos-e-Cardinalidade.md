@@ -78,3 +78,17 @@ Existem várias formas de representar a cardinalidade em um Diagrama Entidade-Re
 
 ---
 ---
+
+## Condicionalidade e Autorrelacionamento
+
+#### Condicionalidade
+
+Refere-se ao fato de um relacionamento poder ter restrições (ex: Uma entidade pode se vincular a A ou B, mas não a ambos).
+
+#### Autorrelacionamento (Relacionamento Reflexivo)
+
+Ocorre quando instâncias da **mesma entidade** se relacionam entre si.
+
+- **Tipo 1:N (hierarquia):** Representa uma estrutura hierárquica.
+    - Ex: A entidade `FUNCIONARIO` tem um relacionamento `supervisiona` com ela mesma (um 'FUNCIONARIO [gestor] supervisiona 'N' `FUNCIONARIOS` [subordinados]).
+- **Tipo M:N (Composição / Estrutura):** Representa composições de um objeto. Ex: A entidade `PRODUTO` se relaciona com ela mesma (um `PRODUTO` [Ex: Carro] é composto por 'N' `PRODUTOS` [Ex: Peças], e um `PRODUTO` [Ex: Parafuso] pode fazer parte de 'N' `PRODUTOS` [Ex: Carro, Moto]).
