@@ -178,3 +178,27 @@ Restrições de Integridade são um conjunto de regras e validações aplicadas 
 
 ---
 ---
+
+## As 12 Regras de Codd
+
+Definidas por Edgar Codd, são um conjutno de 13 regras (da 0 à 12) que determinam se um SGBD é "verdadeiramente relacional". Embora raros SGBDs sigam todas, elas são a base teórica do modelo:
+
+0. **ª Regra (Regra Fundamental):** O sistema deve ser capaz de gerenciar bancos dedados inteiramente por meio de suas capacidades relacionais.
+1. **ª Regra (Regra da Informação):** Toda informação no banco de dados deve ser representada logicamente de uma única forma: por valores em tabelas (linhas e colunas).
+2. **ª Regra (Regra do Acesso Garantido):** Todos os dados devem ser logicamente acessíveis usando uma combinação de nome da tabela, nome da coluna e o valor da Chave Primária.
+3. **ª Regra (Tratamento Sistemático de Nulos):** O SGBD deve ter um tratamento padronizado para valores nulos (dados ausentes ou ináplicáveis), que é distinto de zero ou espaços em branco.
+4. **ª Regra (Catálogo Relacional Ativo):** A descrição do banco (metadados) deve ser armazenada e gerenciada nas mesmas estruturas (tabelas) que os dados comuns,
+5. **ª Regra (Sublinguagem de Dados Abrangente):** O SGBD deve suportar uma linguagem relacional completa (como o SQL) para definição, manipulação e consulta de dados.
+6. **ª Regra (Regra de Atualização de Visões):** O sistema deve ser capaz de atualizar quaisquer Views (visões) que sejam teoricamente atualizáveis.
+7. **ª Regra (Operações de Alto Nível):** O sistema deve suportar operações de `INSERT`, `UPDATE` e `DELETE` em nível de conjunto (múltiplas linhas de uma vez), não apenas registro a registro.
+8. **ª Regra (Independência Lógica):** A forma como os dados são fisicamente armazenados (em arquivos, índices, etc.) deve poder mudar sem que a aplicação precise ser reescrita.
+9. **ª Regra (Independência Lógica):** Alterações na estrutura lógica das tabelas (ex: adicionar uma nova coluna) não devem exigir modificação nas aplicações que não usam essa coluna.
+10 **ª Regra (Independência de Integridade):** As regras de integridade (como `NOT NULL`, `FOREIGN KEY`) devem ser definidas no nível do banco (no catálogo) e não na aplicação.
+11. **ª Regra (Independência de Distribuição):** O banco de dados pode ser distribuído fisicamente em vários locais sem que a aplicação precise saber disso.
+12. **ª Regra (Regra da Não-Subversão):** Se o SGBD tiver uma linguagem de baixo nível (registro a registro), ela não pode ser usada para "burlar" as regras de integridade definidas na linguagem de alto nível (SQL).
+
+## Restrições de Integridade
+
+A integridade de dados refere-se à manutenção e garanta da **exatidão e consistência** dos dados. Isso é alcançado pela aplicação de "restrições de integridade".
+
+**Integridade Definida pelo Usuário:** A única que se refere diretamente às Regras de Negócio (RN). São regras customizadas (além das padrões) que o usuário determina para garantir a validade dos dados (ex: `salario` deve ser maior que zero).

@@ -218,6 +218,30 @@ Chaves são colunas ou um conjunto de colunas em uma tabela usadas para identifi
     - É uma chave **artificial**, geralmente um número inteiro sequencial (Ex: 1, 2, 3...) criada com o único propósito de ser a chave primária.
     - É usada quando não existe uma chave candidata "natural" (como um CPF) ou quando as chaves naturais são muito grandes, complexas ou podem mudar com o tempo. É a prática mais comum no mercado.
 
+## Integridades
+
+### 1. Integridade de Chave (Primária)
+
+- **Definição:** Determina que os valores da Chave Primária (PK) devem ser únicos e não nulos (`NOT NULL`).
+- **Objetivo:** Preserva a integridade da chave, garantindo que todos os registros (linhas) sejam diferentes e possam ser identificados de forma inequívoca.
+
+### 2. Integridade do Vazio (Nulidade)
+
+- **Definição:** Determina se o preenchimento de uma coluna é **obrigatório** (`NOT NULL`) ou **opcional** (`NULL`).
+- **Conceito de NULL:** Um valor `NULL` representa **ausência de dado** ou **dado desconhecido**.
+- **Importante:** `NULL` **não é** a mesma coisa que `0` (zero) ou um texto em branco (`''`). O nulo é a ausência de valor.
+- **Aplicação:** Deve ser usada com base nas Regras de Negócio. Deve-se evitar valores nulos quando possível, pois podem ocupar espaço e complicar consultas.
+
+### 3. Integridade de Domínio
+
+- **Definição:** Refere-se ao domínio de um atributo. Garante que todos os valores inseridos em uma coluna sejam válidos, pertencendo ao **mesmo tipo de dado** e formato.
+- **Exemplo:** Um atributo `Preco` (domínio monetário) não pode aceitar um texto ou uma data. Um atributo `DataNascimento` (domínio data) só aceita datas válidas.
+- **Formas de Restrição de Domínio:**
+    - **`CHECK`:** Controla os dados armazenados validando uma expressão lógica (ex: `idade > 18`, `sexo IN ('M', 'F')`) .
+    - **`NOT NULL` (Nulidade):** Controla a obrigatoriedade (é uma forma de integridade de domínio e de vazio).
+    - **`UNIQUE` (Unicidade):** Define que os valores de uma coluna (ou conjunto de colunas) devem ser distintos (exclusivos) em todas as linhas .
+    - **`DEFAULT`:** Define um valor padrão para a coluna caso nenhum valor seja fornecido durante a inserção.
+
 ### Conceito de Domínio
 
 - O domínio de um atributo é o **conjunto de todos os valores possíveis e permitidos** para aquele atributo.
