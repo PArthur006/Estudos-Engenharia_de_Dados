@@ -48,3 +48,4 @@ A lista abaixo será atualizada conforme novas fontes forem utilizadas.
 - Escola Virtual da Fundação Bradesco
 - Oracle
 - HashTag Treinamentos
+- SenaiPlay
