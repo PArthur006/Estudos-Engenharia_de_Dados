@@ -20,6 +20,8 @@ O objetivo técnico não é apenas movimentar dados, mas construir pipelines de 
 - 📂 `Orquestração e Pipelines Modernos`: Apache Airflow, CI/CD, IaC.
 - 📂 `Portfólio de Projetos`
 
+### **📂Extras:**
+- 📂 `Oracle_Data_Platform_Foundations_Associate`: Anotações de estudos para a certificação Oracle.
 
 ---
 
