@@ -22,6 +22,7 @@ O objetivo técnico não é apenas movimentar dados, mas construir pipelines de 
 
 ### **📂Extras:**
 - 📂 `Oracle_Data_Platform_Foundations_Associate`: Anotações de estudos para a certificação Oracle.
+- 📂 `Data_Analysis_for_Google`: Anotações de Estudo do curso para Certificação de Análise de Dados do Google.
 
 ---
 
